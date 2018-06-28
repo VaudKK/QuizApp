@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="trivia_text">Lets turn those brain cogs</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
+    <string name="question_1">Q1. What element begins with the letter k?</string>
+    <string name="question_2">Q2. Which the biggest Island in the world?</string>
+    <string name="question_2_choice_1">GreenLand</string>
+    <string name="question_2_choice_2">Madagascar</string>
+    <string name="question_2_choice_3">Australia</string>
+    <string name="question_2_choice_4">IceLand</string>
+    <string name="question_3">Q3. How many bones are there in the human body?</string>
+    <string name="question_4">Q4. The most densely populated area of Africa is the area near?</string>
+    <string name="question_4_choice_1">The Nile River</string>
+    <string name="question_4_choice_2">The Congo River</string>
+    <string name="question_4_choice_3">South Africa</string>
+    <string name="question_5">Q5. Which of the following is are gas giants?</string>
+    <string name="question_5_choice_1">Saturn</string>
+    <string name="question_5_choice_2">Neptune</string>
+    <string name="question_5_choice_3">Mars</string>
+    <string name="question_6">Q6. What is the tiny plastic covering of the tip of a shoelace called?</string>
+</resources>

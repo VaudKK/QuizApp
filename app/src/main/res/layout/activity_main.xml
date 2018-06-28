@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:background="#050402"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="30">
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          android:src="@drawable/trivia"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/trivia_text"
+          android:textColor="@color/colorWhite"
+          android:layout_margin="10dp"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:textSize="18sp"/>
+
+   </RelativeLayout>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="70"
+       android:isScrollContainer="false">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="5dp"
+          android:orientation="vertical">
+
+
+         <!--Question one-->
+         <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            android:layout_margin="3dp"
+            android:elevation="3dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="5dp">
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/question_1"
+                  android:textColor="@color/colorBlack"
+                  android:textSize="@dimen/question_font_size"/>
+              <EditText
+                  android:id="@+id/question_one_answer"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionDone"
+                  android:inputType="textAutoComplete"/>
+
+               <!--Show if the user is right or wrong-->
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:id="@+id/information_layout_q1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:padding="5dp"
+                      android:visibility="invisible"
+                      android:orientation="horizontal">
+
+                      <ImageView
+                          android:id="@+id/info_image_q1"
+                          android:layout_width="30dp"
+                          android:layout_height="30dp" />
+
+                      <TextView
+                          android:id="@+id/correct_answer_q1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="4dp"/>
+
+                  </LinearLayout>
+
+                  <!--Shows if wrong
+                  <LinearLayout
+                      android:id="@+id/information_layout_wrong_q1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:padding="5dp"
+                      android:visibility="invisible"
+                      android:orientation="horizontal">
+
+                      <ImageView
+                          android:layout_width="30dp"
+                          android:layout_height="30dp"
+                          android:src="@drawable/erase"/>
+
+                      <TextView
+                          android:id="@+id/correct_answer_q1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="4dp"/>
+
+                  </LinearLayout>-->
+
+                  <Button
+                      android:id="@+id/submit_button_q1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentEnd="true"
+                      android:text="@string/submit"
+                      android:textAllCaps="true"/>
+
+              </RelativeLayout>
+
+           </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+         <!--Question two-->
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="3dp"
+             app:cardCornerRadius="3dp"
+             android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/question_2"
+                   android:textColor="@color/colorBlack"
+                   android:textSize="@dimen/question_font_size"/>
+               <LinearLayout
+                   android:layout_margin="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                  <RadioGroup
+                      android:id="@+id/q2_radiogroup"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+                      <RadioButton
+                          android:id="@+id/chk_greenland"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_2_choice_1"/>
+                      <RadioButton
+                          android:id="@+id/chk_madagascar"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_2_choice_2"/>
+                      <RadioButton
+                          android:id="@+id/chk_australia"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_2_choice_3"/>
+                      <RadioButton
+                          android:id="@+id/chk_iceland"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_2_choice_4"/>
+                  </RadioGroup>
+
+               </LinearLayout>
+
+                <!--Show if the user is right or wrong-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/information_layout_q2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/info_image_q2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:id="@+id/correct_answer_q2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submit_button_q2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/submit"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+
+         <!--Question three-->
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:cardCornerRadius="3dp"
+             android:layout_margin="3dp"
+             android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/question_3"
+                   android:textColor="@color/colorBlack"
+                   android:textSize="@dimen/question_font_size"/>
+               <EditText
+                   android:id="@+id/question_three_answer"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:imeOptions="actionDone"
+                   android:inputType="number" />
+
+                <!--Show if the user is right or wrong-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/information_layout_q3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/info_image_q3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:id="@+id/correct_answer_q3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/submit_button_q3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/submit"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+
+         <!--Question four-->
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="3dp"
+             app:cardCornerRadius="3dp"
+             android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/question_4"
+                   android:textColor="@color/colorBlack"
+                   android:textSize="@dimen/question_font_size"/>
+               <LinearLayout
+                   android:layout_margin="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                  <RadioGroup
+                      android:id="@+id/q4_radiogroup"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+                      <RadioButton
+                          android:id="@+id/chk_nile"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_4_choice_1"/>
+                      <RadioButton
+                          android:id="@+id/chk_congo"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_4_choice_2"/>
+                      <RadioButton
+                          android:id="@+id/chk_sa"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_4_choice_3"/>
+                  </RadioGroup>
+
+               </LinearLayout>
+
+                <!--Show if the user is right or wrong-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/information_layout_q4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/info_image_q4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:id="@+id/correct_answer_q4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/submit_button_q4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/submit"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+
+         <!--Question five-->
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="3dp"
+             app:cardCornerRadius="3dp"
+             android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/question_5"
+                   android:textColor="@color/colorBlack"
+                   android:textSize="@dimen/question_font_size"/>
+               <LinearLayout
+                   android:layout_margin="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                      <CheckBox
+                          android:id="@+id/opt_saturn"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_5_choice_1"/>
+                      <CheckBox
+                          android:id="@+id/opt_neptune"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_5_choice_2"/>
+                      <CheckBox
+                          android:id="@+id/opt_mars"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/question_5_choice_3"/>
+               </LinearLayout>
+
+                <!--Show if the user is right or wrong-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/information_layout_q5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/info_image_q5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:id="@+id/correct_answer_q5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/submit_button_q5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/submit"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+
+         <!--Question six-->
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:cardCornerRadius="3dp"
+             android:layout_margin="3dp"
+             android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/question_6"
+                   android:textColor="@color/colorBlack"
+                   android:textSize="@dimen/question_font_size"/>
+               <EditText
+                   android:id="@+id/question_six_answer"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:imeOptions="actionDone"
+                   android:inputType="textAutoComplete"/>
+
+                <!--Show if the user is right or wrong-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/information_layout_q6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/info_image_q6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:id="@+id/correct_answer_q6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/submit_button_q6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/submit"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+
+         <Button
+             android:id="@+id/btn_Reset"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/reset"
+             android:layout_marginTop="3dp"
+             android:layout_marginBottom="3dp"
+             android:enabled="false"
+             android:textAllCaps="true"/>
+
+      </LinearLayout>
+
+   </ScrollView>
+
+
+</LinearLayout>
