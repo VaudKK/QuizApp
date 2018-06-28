@@ -7,4 +7,6 @@ It consists of 6 questions.After the user answers a question he/she submits it f
 
 ScreenShot
 
+Get the apk from https://drive.google.com/file/d/1BQ7YGQoUqTMXrt4cI671-B2J9sylDbUt/view?usp=sharing
+
 ![screenshot1](https://user-images.githubusercontent.com/31437805/42032895-b79105b4-7ae3-11e8-9910-eed24a505b4f.png)
